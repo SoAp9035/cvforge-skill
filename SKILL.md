@@ -1,5 +1,5 @@
 ---
-name: cvforge
+name: cvforge-skill
 description: Create, edit, build, and troubleshoot CVForge resumes from YAML into ATS-friendly PDFs. Use when working with cv.yaml files, CVForge resume content, Typst resume generation, font/photo options, or ATS checks with the cvforge CLI.
 license: MIT
 compatibility: Requires CVForge CLI available as cvforge or uvx cvforge; shell access is needed for PDF build and ATS checks.
