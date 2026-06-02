@@ -18,13 +18,14 @@ CVForge resume.
 2. Preserve factual resume content. Do not invent employers, schools, dates,
    credentials, links, metrics, or personal details. If content is missing,
    leave a clear placeholder or ask the user.
-3. Keep YAML valid and compatible with CVForge. Prefer the documented fields
-   and list shapes; do not add arbitrary top-level sections unless the user
-   also wants CVForge template/code changes.
-4. Build with `cvforge <file>.yaml` or `cvforge build <file>.yaml`.
-5. Validate the generated PDF with `cvforge ats-check <file>.pdf` when a PDF is
+3. Keep YAML valid and compatible with CVForge. Respect the documented section
+   order because CVForge renders supported sections in YAML order.
+4. Use only documented top-level fields unless the user also asks for template
+   or code changes. Keep section list shapes exactly as documented.
+5. Build with `cvforge <file>.yaml` or `cvforge build <file>.yaml`.
+6. Validate the generated PDF with `cvforge ats-check <file>.pdf` when a PDF is
    produced.
-6. Report the output path and any ATS warnings or build errors that matter.
+7. Report the output path and any ATS warnings or build errors that matter.
 
 ## Content Rules
 
@@ -33,9 +34,11 @@ CVForge resume.
 - Prefer measurable outcomes only when the user supplied the numbers.
 - Use `__text__` for inline bold emphasis in narrative fields.
 - Keep section names and fields compatible with the CVForge schema.
+- If a user wants a new section type, explain that CVForge template/code changes
+  are required before adding arbitrary YAML.
 
 ## Reference
 
 Read [references/cvforge-reference.md](references/cvforge-reference.md) when
-you need command examples, YAML field details, fonts, ATS guidance, or build
-troubleshooting.
+you need command examples, YAML field details, section examples, fonts, ATS
+guidance, or build troubleshooting.
